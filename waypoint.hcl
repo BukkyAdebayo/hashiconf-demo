@@ -4,7 +4,8 @@ runner {
   enabled = true
 
   data_source "git" {
-    url  = ""
+    url  = "https://github.com/BukkyAdebayo/hashiconf-demo.git"
+    path = ""
   }
 }
 
