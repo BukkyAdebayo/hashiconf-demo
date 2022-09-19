@@ -1,11 +1,20 @@
-project = "go-k8s"
+project = "hashiconf-demo"
 
-app "go-k8s" {
+runner {
+  enabled = true
+
+  data_source "git" {
+    url  = ""
+  }
+}
+
+app "hashiconf-demo" {
   labels = {
     "service" = "go-k8s",
     "env"     = "dev"
   }
 
+  
   build {
     use "docker" {}
     registry {
