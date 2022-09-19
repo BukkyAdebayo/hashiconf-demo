@@ -17,15 +17,14 @@ app "go-k8s" {
   }
 
   deploy {
-    use "kubernetes" {
-      probe_path = "/"
-      service_port = 3000
+    use "aws-ecs" {
+   region = "us-east-1"
+   memory = 512
     }
   }
 
-  release {
-    use "kubernetes" {
-      load_balancer = true
+release {
+  use "aws-alb" {
     }
   }
 }
